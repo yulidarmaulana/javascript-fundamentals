@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data Array</title>
+</head>
+
+<body>
+    <script>
+
+        let arrayKosong = []; // mengisi array dengan tipe data array
+
+        let arrayNama = ["Yulidar", "Maulana", "Ivan"]; // array of strings
+
+        const names = [];
+        names.push("Yulidar");
+        names.push("Maulana", "Ivan");
+        names.push("Saputra", "saya", "dia");
+
+        console.table(names); // menampilkan array
+
+        console.info(names.length); // menampilkan panjang array
+
+        console.log(names[0]); // menampilkan elemen array
+        console.log(names[1]);
+
+        names[0] = "Programmer"; // merubah elemen array
+
+        console.log(names);
+
+        delete names[3] // menghapus elemen array
+        console.table(names);
+
+        names.push("Yulidar baru"); // menambah elemen array
+        console.table(names);
+
+        names.push(1, 2, 3, 4, 5); // menambah elemen array dengan tipe data lain
+        names.push(["Yulidar", "Maulana", "Ivan"]); // menambah elemen array dengan tipe data array
+
+        console.table(names); // menampilkan array
+
+    </script>
+</body>
+
+</html>
