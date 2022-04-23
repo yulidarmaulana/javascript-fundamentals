@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data Object</title>
+</head>
+
+<body>
+    <script>
+
+        // Tipe Data Object
+        const obj = {};
+
+        obj["name"] = "Yulidar";
+        obj["age"] = "20";
+        obj["address"] = "Indonesia";
+
+
+        console.table(obj);
+
+        delete obj.address;
+        console.table(obj);
+
+
+        const obj2 = {
+            "nama lengkap": "Yulidar Maulana",
+            age: 20,
+            address: "Indonesia"
+        };
+
+        console.info(`name = ${obj2["nama lengkap"]}`);
+        console.info(`age = ${obj2.age}`);
+        console.info(`address = ${obj2.address}`);
+
+        console.table(obj2);
+
+    </script>
+</body>
+
+</html>
