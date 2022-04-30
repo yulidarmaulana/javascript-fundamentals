@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Default Parameter</title>
+</head>
+<body>
+    <script>
+
+        function register(name, gander = "UNKNOWN") {
+            console.info(name);
+            console.info(gander);
+        }
+
+        register("yulidar", "MALE");
+        register("maulana");
+        register("ivan", undefined);
+        register("saputra", null)
+
+    </script>
+</body>
+</html>

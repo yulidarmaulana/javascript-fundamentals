@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Rest Parameter</title>
+</head>
+<body>
+    <script>
+
+        function sum(name, ...numbers) { // ...numbers is rest parameter
+            let total = 0;
+            for (let item of numbers) {
+                total += item;
+            }
+
+            document.writeln(`<p>Total ${name}'s total is ${total}</p>`);
+        }
+
+        sum("apple", 1, 2, 3, 4, 5);
+
+    </script>
+</body>
+</html>
