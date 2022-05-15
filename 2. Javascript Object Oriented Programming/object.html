@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+
+<body>
+    <script>
+
+        function Person(firstName, lastName) { // parameterized constructor
+            this.firstName = firstName; // this refers to the object
+            this.lastName = lastName;
+            this.sayHello = function (value) { // method
+                console.info(`Hello ${this.firstName} ${this.lastName}, Selamat ${value}`); // this refers to the object
+            }
+        }
+
+        const yulidar = new Person("Yulidar", "Maulana"); // object instantiation
+        yulidar.sayHello("Pagi"); // method call
+
+
+        const ivan = new Person("Ivan", "Saputra");
+        ivan.sayHello("Siang");
+
+
+        console.info(yulidar); // object
+        console.info(ivan);
+
+    </script>
+</body>
+
+</html>
