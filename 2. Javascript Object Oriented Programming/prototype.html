@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor Inheritance</title>
+</head>
+
+<body>
+    <script>
+
+        function Person(firstName, lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.sayHello = function (name) {
+                console.info(`Hello ${name}, My name is ${this.firstName} ${this.lastName}`);
+            }
+        }
+
+        Person.prototype.sayBye = function () {
+            console.info("Good Bye");
+        }
+
+        Person.prototype.run = function () {
+            console.info(`Hello ${this.firstName} ${this.lastName}`);
+        }
+
+        const yulidar = new Person("Yulidar", "Maulana");
+        const maulana = new Person("Maulana", "Yulidar");
+
+        console.info(yulidar);
+        console.info(maulana);
+
+    </script>
+</body>
+
+</html>
