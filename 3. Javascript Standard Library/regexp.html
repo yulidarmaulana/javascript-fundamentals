@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegExp</title>
+</head>
+
+<body>
+    <script>
+
+        {
+            // create RegExp
+
+            const regex1 = /yulidar/;
+            const regex2 = new RegExp("yulidar");
+            const regex3 = new RegExp(/yulidar/);
+        }
+
+        {
+            // Test RegExp
+
+            const name = "yulidar maulana ivan saputra";
+            const regex = /ivan/;
+
+            const result = regex.exec(name);
+            console.info(result);
+            console.info(regex.exec("tidak ada"));
+
+            const test = regex.test(name);
+            console.info(test);
+            console.info(regex.test("tidak ada"));
+        }
+
+        {
+            // regex modifier
+
+            const name = "yulidar maulana\nYulidar ivan\nMaulana Saputra";
+            const regex1 = /^e.o/igm
+            const regex2 = /maulana/ig
+
+            let result;
+            while ((result = regex1.exec(name)) !== null) {
+                console.info(result);
+            }
+
+            while ((result = regex2.exec(name)) !== null) {
+                console.info(result);
+            }
+        }
+
+        {
+            // advanced regex
+            const regex = /yulidar[aiueo]/ig
+
+            const name = "yulidara yulidari yulidaru yulidare yulidaro";
+            let result;
+            while ((result = regex.exec(name)) !== null) {
+                console.info(result);
+            }
+        }
+
+        {
+            const name = "yulidara yulidari yulidaru yulidare yulidaro yulidar";
+
+            console.info(name.match(/yulidar[aiueo]/ig));
+            console.info(name.search(/yulidar[aiueo]/ig));
+            console.info(name.replace(/yulidar[aiueo]/i, "kamu"));
+            console.info(name.replaceAll(/yulidar[aiueo]/ig, "kamu"));
+            console.info(name.split(/e/ig));
+        }
+
+    </script>
+</body>
+
+</html>
